@@ -1,5 +1,5 @@
 import styles from "./home.module.scss"
-import {GetServerSideProps} from "next"
+import {GetServerSideProps,GetStaticProps} from "next"
 import Head from "next/head";
 import Img from "next/image"
 import avatarImg from "../../public/images/avatar.svg"
@@ -37,7 +37,7 @@ export default function Home({product}:HomeProps) {
 }
 
 
-export const getServerSideProps:GetServerSideProps = async ()=> {
+export const getStaticProps:GetStaticProps = async ()=> {
   console.log("say hy to next SSR 😁")
 
 
@@ -54,6 +54,7 @@ export const getServerSideProps:GetServerSideProps = async ()=> {
   return {
     props:{
       product
-    }
+    },
+    revalidate:60 * 60 * 24 // 24 hours
   }
 }
