@@ -19,7 +19,7 @@ export function SubscribeButton({priceId}:SubscribeButtonProps){
         }
         if(session.activeSubscription)
         {
-            router.push(`${process.env.BASE_URL}/posts`)
+            router.push(`/posts`)
             return;
         }
         try

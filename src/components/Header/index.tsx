@@ -12,10 +12,10 @@ export function Header() {
       <div className={styles.headerContent}>
         <Img src={logoImg} alt="ig.news" />
         <nav>
-          <ActiveLink activeClassName={styles.active} href={`${process.env.BASE_URL}/`}>
+          <ActiveLink activeClassName={styles.active} href={`/`}>
             <a>Home</a>
           </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href={`${process.env.BASE_URL}/posts`} prefetch>
+          <ActiveLink activeClassName={styles.active} href={`/posts`} prefetch>
             <a>Posts</a>
           </ActiveLink>
         </nav>
