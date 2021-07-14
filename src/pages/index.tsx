@@ -1,5 +1,5 @@
 import styles from "./home.module.scss"
-import {GetServerSideProps,GetStaticProps} from "next"
+import {GetStaticProps} from "next"
 import Head from "next/head";
 import Img from "next/image"
 import avatarImg from "../../public/images/avatar.svg"

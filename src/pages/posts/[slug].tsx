@@ -46,7 +46,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   if (!session?.activeSubscription) {
     return {
       redirect: {
-        destination: "/",
+        destination: `${process.env.BASE_URL}/`,
         permanent: false,
       },
     };
