@@ -55,14 +55,14 @@ export default function PostPreview({ post }: PostPreviewProps) {
   );
 }
 
+
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{params:{
-      slug:"linq-performance-dangers"
-    }}],
+    paths: [],
     fallback: "blocking",
   };
 };
+
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params;
