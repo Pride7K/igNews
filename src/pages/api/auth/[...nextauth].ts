@@ -9,6 +9,7 @@ export default NextAuth({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENTE_SECRET,
       scope: "read:user",
+      
     }),
   ],
   callbacks: {
@@ -69,7 +70,7 @@ export default NextAuth({
       }
     },
     async redirect(url, baseUrl) {
-      return "https://ig-news-lovat.vercel.app";
+      return "http://ig-news-lovat.vercel.app";
     },
     async jwt(token, user, account, profile, isNewUser) {
       return token;
