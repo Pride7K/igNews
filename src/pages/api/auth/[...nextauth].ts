@@ -2,7 +2,6 @@ import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 import { fauna } from "../../../services/fauna";
 import { query as q } from "faunadb";
-import { session } from "next-auth/client";
 
 export default NextAuth({
   providers: [
@@ -70,7 +69,7 @@ export default NextAuth({
       }
     },
     async redirect(url, baseUrl) {
-      return baseUrl;
+      return "https://ig-news-lovat.vercel.app";
     },
     async jwt(token, user, account, profile, isNewUser) {
       return token;
